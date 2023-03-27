@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wang</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            <button onclick="themXe()">Thêm mới xe</button>
+        </td>
+        <td>
+            <button onclick="xoaMotor()">Xóa xe</button>
+        </td>
+    </tr>
+</table>
+<div id="table"></div>
+<script>
+    class Car {
+        constructor(number, name, code, model, cost) {
+            this.carnumber = number;
+            this.name = name;
+            this.code = code;
+            this.model = model;
+            this.cost = cost;
+        }
+
+        getNumber() {
+            return this.carnumber;
+        }
+
+        setNumber(newNum) {
+            newNum = prompt('Nhập biển số xe');
+            while (newNum.length >= 20) {
+                newNum = prompt('Nhập lại biển số xe:');
+            }
+            this.carnumber = newNum;
+            return this.carnumber;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(newName) {
+            newName = prompt('Nhập Họ và tên sinh viên');
+            while (newName.length >= 40) {
+                newName = prompt('Nhập lại Họ và tên sinh viên:');
+            }
+            this.name = newName;
+            return this.name;
+        }
+
+        getCode() {
+            return this.code;
+        }
+
+        setCode(newCode) {
+            newCode = +prompt('Nhập chứng minh nhân dân');
+            this.code = newCode;
+            return this.code;
+        }
+
+        getModel() {
+            return this.model;
+        }
+
+        setModel(newModel) {
+            newModel = prompt('Nhập các hãng xe có sẵn: \n' +
+                '1.Honda \n' +
+                '2.Yamaha \n' +
+                '3.Sym \n' +
+                '4.Piaggio \n' +
+                '5.Suzuki \n' +
+                '6.Ducati \n' +
+                '7.Hãng khác \n')
+            this.model = newModel;
+            return this.model;
+        }
+
+        getCost() {
+            return this.cost;
+        }
+
+        setCost(newCost) {
+            newCost = +prompt('Nhập giá gửi xe');
+            this.cost = newCost;
+            return this.cost;
+        }
+    }
+
+    let carList = [];
+    display(carList);
+
+    function display(list) {
+        let table = "<table style='text-align: left' border='1px'>" +
+            "<tr>" +
+            "<th style='width: 40px'>Biển số xe</th>" +
+            "<th style='width: 200px'>Họ và tên sinh viên</th>" +
+            "<th style='width: 100px'>CMND</th>" +
+            "<th style='width: 200px'>Hãng xe</th>" +
+            "<th style='width: 100px'>Phí gửi xe</th>" +
+            "</tr>"
+
+        for (let i = 0; i < list.length; i++) {
+            table += '<tr>' +
+                '<td>' + (list[i].carnumber) + '</td>' +
+                '<td>' + (list[i].name) + '</td>' +
+                '<td>' + (list[i].code) + '</td>' +
+                '<td>' + (list[i].model) + '</td>' +
+                '<td>' + (list[i].cost) + '</td>' +
+                '</tr>'
+        }
+        table += '</table>';
+        document.getElementById("table").innerHTML = table;
+    }
+
+    function themXe() {
+        let car = new Car();
+        let flag = true;
+        let n = car.setNumber();
+        for (let i = 0; i < carList.length; i++) {
+            if (n === carList[i].getNumber()) {
+                flag = false;
+                break;
+            } else flag = true;
+        }
+        if (flag) {
+            car.setName();
+            car.setCode();
+            car.setModel();
+            car.setCost();
+            carList.push(car);
+            display(carList);
+        } else alert("Biển số xe đã tồn tại");
+    }
+
+    function xoaMotor() {
+        let num = prompt('Nhập biển số xe để xóa');
+        let flat = false;
+        for (let i = 0; i < carList.length; i++) {
+            if (num === carList[i].getNumber()) {
+                let value = window.confirm('Bạn có muốn xóa số xe này không?');
+                if (value) {
+                    carList.splice(i, 1);
+                    display(carList);
+                    flat = true;
+                }
+                display(carList);
+            }
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        table {
+            border: 1px;
+        }
+
+    </style>
+</head>
+
+<body>
+<table>
+    <tr>
+        <td>
+            <button onclick="addStudent()">Thêm mới học viên</button>
+        </td>
+        <td>
+            <button onclick="fixInfoStudent()">Sửa thông tin học viên</button>
+        </td>
+
+    </tr>
+    <td>
+        <button onclick="deleteStudent()">Xóa học viên</button>
+    </td>
+</table>
+<div id="table"></div>
+<script>
+    class Student{
+        constructor(code,name,course,email,birthday,module) {
+            this.code = code;
+            this.name = name;
+            this.course = course;
+            this.email = email;
+            this.birthday = birthday;
+            this.module = module;
+        }
+
+        setCode(newCode){
+            newCode = prompt('Nhập mã học viên');
+            while ((newCode.length!==4)){
+                alert('Mã học viên là số gồm 4 chữ số');
+                newCode = prompt('Nhập mã học viên');
+            }
+            this.code = newCode;
+            return this.code;
+        }
+        getCode(){
+            return this.code;
+        }
+
+        setName(newName){
+            newName = prompt('Nhập Họ và tên học viên');
+            while (newName.length>50){
+                alert('Nhập quá độ dài cho phép (Tối đa: 50 ký tự)');
+                newName = prompt('Nhập Họ và tên học viên');
+            }
+            this.name = newName;
+            return this.name;
+        }
+        getName(){
+            return this.name;
+        }
+
+        setCourse(newCourse){
+            newCourse = prompt("Nhập khóa học");
+            this.course = newCourse;
+            return this.course;
+        }
+        getCourse(){
+            return this.course;
+        }
+
+        setEmail(newEmail){
+            newEmail = prompt("Nhập email học viên");
+            this.email = newEmail;
+            return this.email;
+        }
+        getEmail(){
+            return this.email;
+        }
+
+        setBirthday(newBirthday){
+            newBirthday = prompt("Nhập ngày sinh học viên");
+            this.birthday = newBirthday;
+            return this.birthday;
+        }
+        getBirthday(){
+            return this.birthday;
+        }
+        setModule(newModule){
+            newModule = +prompt('Nhập module học viên đang học');
+            while(newModule<0&&newModule>6){
+                alert('Module chỉ từ 1 đến 6 ');
+                newModule = +prompt('Nhập module học viên đang học');
+            }
+            this.module = newModule;
+            return this.module;
+        }
+        getModule(){
+            return this.module;
+        }
+    }
+    let studentList = [];
+    display(studentList);
+    function  display(list) {
+        let table = "<table style='text-align: left' border='1px'>" +
+            "<tr>" +
+            "<th style='width: 40px'>STT</th>"+
+            "<th style='width: 200px'>Tên</th>"+
+            "<th style='width: 100px'>Khóa</th>"+
+            "<th style='width: 200px'>Email</th>"+
+            "<th style='width: 100px'>Ngày sinh</th>"+
+            "</tr>"
+
+        for(let i = 0;i<list.length;i++){
+            table +='<tr>' +
+                '<td>'+list[i].code+'</td>' +
+                '<td>'+(list[i].name)+'</td>' +
+                '<td>'+(list[i].course)+'</td>' +
+                '<td>'+(list[i].email)+'</td>' +
+                '<td>'+(list[i].birthday)+'</td>' +
+                '</tr>'
+        }
+        table+='</table>';
+        document.getElementById("table").innerHTML = table;
+    }
+    function addStudent() {
+        let student = new Student();
+        let flag = true;
+        let n = student.setCode();
+        for (let i = 0; i <studentList.length ; i++) {
+            if (n===studentList[i].getCode()){
+                flag = false;
+                break;
+            }else flag = true;
+        }
+        if(flag){
+            student.setName();
+            student.setCourse();
+            student.setEmail();
+            student.setBirthday();
+            studentList.push(student);
+            display(studentList);
+        }else alert("Mã số sinh viên đã tồn tại");
+    }
+    function fixInfoStudent() {
+        let num = +prompt('Nhập mã số học viên để kiểm tra');
+        let flat = false;
+        for (let i =0; i< studentList.length;i++) {
+            if (num === studentList[i].getCode()) {
+                studentList[i].setName();
+                studentList[i].setCourse();
+                studentList[i].setEmail();
+                studentList[i].setBirthday();
+                display(studentList);
+                flat = true;
+                break;
+            }
+        }if(flat===false){
+            alert('Mã học viên không tồn tại');
+        }
+    }
+    function deleteStudent() {
+        let num = +prompt('Nhập mã số học viên để xóa');
+        let flat = false;
+        for (let i = 0; i < studentList.length; i++) {
+            if (num === studentList[i].getCode()) {
+                let value = window.confirm('Bạn có muốn xóa học viên này không?');
+                if (value) {
+                    studentList.splice(i,1);
+                    display(studentList);
+                    flat = true;
+                }
+                display(studentList);
+            }
+        }
+        if(flat===false){
+            alert('Mã học viên không tồn tại');
+        }
+    }
+</script>
+</body>
+</html>

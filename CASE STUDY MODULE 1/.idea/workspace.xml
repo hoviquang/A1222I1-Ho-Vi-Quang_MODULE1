@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="30640070-759d-46c7-a799-c5ac6d76de49" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VI.Yêu cầu 6(OOP)/.idea/Task6.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/II.Yêu cầu 2 ( Loop )/bai1.html" beforeDir="false" afterPath="$PROJECT_DIR$/II.Yêu cầu 2 ( Loop )/bai1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/II.Yêu cầu 2 ( Loop )/bai2.html" beforeDir="false" afterPath="$PROJECT_DIR$/II.Yêu cầu 2 ( Loop )/bai2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/II.Yêu cầu 2 ( Loop )/bai3.html" beforeDir="false" afterPath="$PROJECT_DIR$/II.Yêu cầu 2 ( Loop )/bai3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/III.Yêu cầu 3 (Mảng và Loop)/bai1.html" beforeDir="false" afterPath="$PROJECT_DIR$/III.Yêu cầu 3 (Mảng và Loop)/bai1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/III.Yêu cầu 3 (Mảng và Loop)/bai2.html" beforeDir="false" afterPath="$PROJECT_DIR$/III.Yêu cầu 3 (Mảng và Loop)/bai2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/III.Yêu cầu 3 (Mảng và Loop)/bai3.html" beforeDir="false" afterPath="$PROJECT_DIR$/III.Yêu cầu 3 (Mảng và Loop)/bai3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/III.Yêu cầu 3 (Mảng và Loop)/bai4.html" beforeDir="false" afterPath="$PROJECT_DIR$/III.Yêu cầu 3 (Mảng và Loop)/bai4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task4/bai1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task4/bai2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task4/bai3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task5/bai1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task5/bai2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task5/bai3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gamecode" beforeDir="false" afterPath="$PROJECT_DIR$/../Gamecode" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2Llzmc30jsKNTDJrrMm1fXf7rMh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../baithiM1" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="30640070-759d-46c7-a799-c5ac6d76de49" name="Default Changelist" comment="" />
+      <created>1676460616277</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1676460616277</updated>
+      <workItem from="1676460617403" duration="8519000" />
+      <workItem from="1676639982278" duration="255000" />
+      <workItem from="1678773353772" duration="4036000" />
+      <workItem from="1679298586495" duration="2087000" />
+      <workItem from="1679310346988" duration="22000" />
+      <workItem from="1679313552897" duration="50000" />
+      <workItem from="1679315280152" duration="6012000" />
+      <workItem from="1679325231798" duration="223000" />
+      <workItem from="1679453309766" duration="23000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="309" y="274" key="FileChooserDialogImpl" timestamp="1679453331446">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="309" y="274" key="FileChooserDialogImpl/0.0.1920.1032@0.0.1920.1032" timestamp="1679453331446" />
+  </component>
+</project>

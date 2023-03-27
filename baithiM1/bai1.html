@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wang</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("Nhập số phần tử của mảng (n <= 50):"));
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        arr.push(parseInt(prompt("Nhập phần tử thứ " + (i + 1) + ":")));
+    }
+
+    function isWaveArray(arr) {
+        if (arr.length < 3) {
+            return false;
+        }
+        for (let i = 1; i < arr.length - 1; i++) {
+            if ((arr[i] < arr[i - 1] && arr[i] < arr[i + 1]) ||
+                (arr[i] > arr[i - 1] && arr[i] > arr[i + 1])) {
+                continue;
+            } else {
+                return false;
+            }
+        }
+        return true;
+    }
+
+
+    alert("Mảng vừa nhập là: " + arr.join(", "));
+    if (isWaveArray(arr)) {
+        alert("True");
+    } else {
+        alert("False");
+    }
+</script>
+</body>
+</html>

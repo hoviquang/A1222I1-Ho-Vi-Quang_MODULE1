@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let m = +prompt("Nhập Các Hàng Phần Tử Của Mảng:")
+    let n = +prompt("Nhập Các Cột Phần Tử Của Mảng:")
+    let arr = [];
+    let result = 0;
+    let arr2 = [];
+    for (let i = 0; i < m; i++) {
+        arr[i] = [];
+        for (let j = 0; j < n; j++) {
+            arr[i][j] = Math.floor(Math.random() * 100)
+            if (arr[i][j] % 2 === 0) {
+                arr2.push(arr[i][j]);
+            }
+        }
+    }
+    for ( i = 0; i < arr2.length ; i++) {
+        result += arr2[i];
+    }
+    console.log(arr);
+    document.write(arr2);
+    document.write("Tổng Số Chẵn Là:" + result);
+</script>
+</body>
+</html>

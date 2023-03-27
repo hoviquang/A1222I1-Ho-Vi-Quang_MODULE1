@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="menu"></div>
+<button onclick="chooseDrink()">Chọn thức uống</button>
+<script>
+    //MENU nước
+
+    let menu = ["Cafe", "Cam vắt", "Nước ép cà rốt", "Nước ép cà chua", "Nước lọc", "Nước dừa"];
+    let price = [12000, 10000, 15000, 20000, 5000, 25000];
+    let choose = 0, amount = 0;
+    billPay = 0;
+    for (let i = 0; i < menu.length; i++) {
+        document.getElementById("menu").innerHTML += (i + 1 + ". " + menu[i] + "<br>");
+    }
+    document.getElementById("menu").innerHTML += (menu.length + 1 + ". " + "Thoát gọi món");
+
+    function chooseDrink() {
+        do {
+            choose = +prompt("Chọn thức uống:");
+            if (choose >= 1 && choose <= menu.length) {
+                amount = +prompt("Giá 1 sản phẩm: " + price[choose - 1] + ". Nhập số lượng:");
+                billPay += amount * price[choose - 1];
+            }
+            else {
+                document.write("Tong Tien: "+billPay);
+            }
+        }
+        while (choose !== 7);
+    }
+
+
+</script>
+</body>
+</html>

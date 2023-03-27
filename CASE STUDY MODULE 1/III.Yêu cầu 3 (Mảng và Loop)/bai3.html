@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //maxFraction
+
+    let numerator = [];
+    let denominator = [];
+    let maxFraction =[];
+    let max = 0;
+    let k = +prompt("Nhập vào số phân số mong muốn");
+    for (let i = 0; i < k ; i++){
+        do{
+            numerator[i] = +prompt("Nhập vào tử số");
+        }while (isNaN(numerator[i]))
+        do{
+            denominator[i] = +prompt("Nhập vào mẫu số");
+        }while (isNaN(denominator[i])||denominator[i]===0)
+        maxFraction[i] = numerator[i]/denominator[i];
+        if (max < maxFraction[i]){
+            max = maxFraction[i];
+        }
+    }
+    document.write("Tử số là: " + numerator + "<br>");
+    document.write("Mẫu số là: " + denominator+ "<br>");
+    document.write("Chi số của phân số lớn nhất là: " + maxFraction.indexOf(max));
+
+</script>
+</body>
+</html>

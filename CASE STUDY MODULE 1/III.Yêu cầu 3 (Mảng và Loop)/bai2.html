@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //missingValue
+
+    let arrA = [];
+    let k = +prompt("Chiều dài mảng A");
+    let missingValue = [];
+    let count = 0;
+    for (let i = 0; i <k ; i++) {
+        arrA[i] = +prompt("Nhập số nguyên  bất kỳ cho mảng A");
+    }
+    arrA.sort(function (a,b) {
+        return a-b;
+    })
+    for(let m = k-1; m >=0;m--){
+        if(arrA[m]===arrA[m-1]){
+            arrA.splice(m,1);
+        }
+    }
+    document.write("Mảng A là: " + arrA + "<br>");
+    let l = +prompt("Chiều dài mảng B");
+    let arrB = [];
+    for (let i = 0; i <l ; i++) {
+        arrB[i] = +prompt("Nhập số nguyên  bất kỳ cho mảng B");
+    }
+    arrB.sort(function (a,b) {
+        return a-b;
+    })
+    for(let n = l-1; n >=0;n--){
+        if(arrB[n]===arrB[n+1]){
+            arrB.splice(n,1);
+        }
+    }
+    document.write("Mảng B là: " + arrB + "<br>");
+    for (k = arrB.length-1;k>=0;k--){
+        let flat = true;
+        for (l= arrA.length-1;l>=0;l--){
+            if (arrA[l]===arrB[k]){
+                arrA.splice(l,1);
+                arrB.splice(k,1);
+                flat = false;
+                break;
+            }else
+                flat = true;
+        }
+        if (flat === true){
+            missingValue.push(arrB.splice(k,1));
+        }
+    }
+    document.write("Mảng MissingValue là: "+ missingValue);
+</script>
+</body>
+</html>
